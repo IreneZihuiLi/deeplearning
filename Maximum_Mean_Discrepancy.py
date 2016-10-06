@@ -93,8 +93,8 @@ class MMD():
         return kernel
 
     def getBandWidth(self,input_x,input_y,n_source,n_target,dim):
-        '''
-        gamma = 1/E(||x-y||)
+        ''' calculate bandwidth
+        gamma = 1/E(||x-y||) 
         :param input_x:
         :param input_y:
         :param sigma:
@@ -123,6 +123,7 @@ class MMD():
         gamma = tf.div(counter,sum_up)
 
         return gamma
+
 
 
 
