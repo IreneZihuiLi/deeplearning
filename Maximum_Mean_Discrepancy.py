@@ -105,19 +105,23 @@ class MMD():
         '''
         x = tf.cast(input_x, tf.float32)
         y = tf.cast(input_y, tf.float32)
-        counter = tf.constant(.0)
+        counter = tf.constant(float(n_source))
         sum_up = tf.constant(.0)
         shape = [1, dim]
         for s in range(n_source):
             list1 = tf.slice(x, [s, 0], shape)
             list2 = tf.slice(y, [s, 0], shape)
+
             # get ||x-y||
             squared = tf.square(tf.sub(list1, list2))
-            reduced = tf.reduce_sum(squared)
-            sum_up  = tf.add(sum_up,tf.to_float(reduced))
-            counter = tf.add(counter,tf.constant(1.))
+            norm = tf.reduce_sum(tf.sqrt(squared))
+            norm = tf.div(norm,tf.constant(float(dim)))
+
+            sum_up  = tf.add(sum_up,tf.to_float(norm))
+
 
         gamma = tf.div(counter,sum_up)
+
         return gamma
 
 
@@ -210,11 +214,11 @@ class MMD():
     def testSession(self):
         # This is the test session
         num_samples = 90
-        dimension = 3
+        dimension = 64
         num_kernels = 10
 
 
-        x = tf.random_normal([num_samples, dimension], mean=10.0,stddev=5.01)
+        x = tf.random_normal([num_samples, dimension], mean=0.0,stddev=0.01)
         y = tf.random_normal([num_samples, dimension], mean=0.0,stddev=0.01)
 
         sigma = self.getBandWidth(x,y,num_samples,num_samples,dimension)
@@ -225,8 +229,10 @@ class MMD():
         init = tf.initialize_all_variables()
         sess = tf.Session()
         sess.run(init)
-        s,k = sess.run([sigma,kernel])
+
+        s = sess.run(sigma)
         print('Sigma:',s)
+        k = sess.run(kernel)
         print('Before Optimization MMD:', k)
         kn = sess.run(kernel_new)
 
