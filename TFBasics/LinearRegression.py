@@ -1,3 +1,4 @@
+# Code from https://www.youtube.com/watch?v=L8Y2_Cq2X5s&index=8&list=PLCJlDcMjVoEdtem5GaohTC1o9HTTFtK7_
 
 # A linear regression example
 print("-----------Linear Regression-------------")
