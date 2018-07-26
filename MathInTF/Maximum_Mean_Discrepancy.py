@@ -16,13 +16,13 @@ class MMD():
 
 
         #get eculidean distance
-        squared = tf.square(tf.sub(x, y))
+        squared = tf.square(tf.subtract(x, y))
         reduced = tf.reduce_sum(squared)
         distance = tf.to_float(reduced)
         #distance = tf.sqrt(converted)
 
         # need to estimate
-        yita = tf.div(distance,tf.mul(tf.constant(-2.,dtype=tf.float32),sigma))
+        yita = tf.div(distance,tf.multiply(tf.constant(-2.,dtype=tf.float32),sigma))
 
         # get gaussian kernel
         gaussian = tf.exp(yita)
@@ -34,7 +34,6 @@ class MMD():
 
     def getkernel(self,input_x,input_y,n_source,n_target,dim,sigma):
         '''
-
         :param x: sourceMatrix
         :param y: targetMatrix
         :param n_source: # of source samples
@@ -84,7 +83,7 @@ class MMD():
 
         term1 = tf.div(k_ss,n_ss )
         term2 = tf.div( k_tt, n_tt)
-        term3 = tf.mul(signal, tf.div(k_st,n_st))
+        term3 = tf.multiply(signal, tf.div(k_st,n_st))
         term4 = tf.add(term1,term2)
 
         kernel = tf.add(term3, term4)
@@ -94,7 +93,7 @@ class MMD():
 
     def getBandWidth(self,input_x,input_y,n_source,n_target,dim):
         ''' calculate bandwidth
-        gamma = 1/E(||x-y||) 
+        gamma = 1/E(||x-y||)
         :param input_x:
         :param input_y:
         :param sigma:
@@ -113,7 +112,7 @@ class MMD():
             list2 = tf.slice(y, [s, 0], shape)
 
             # get ||x-y||
-            squared = tf.square(tf.sub(list1, list2))
+            squared = tf.square(tf.subtract(list1, list2))
             norm = tf.reduce_sum(tf.sqrt(squared))
             norm = tf.div(norm,tf.constant(float(dim)))
 
@@ -166,7 +165,7 @@ class MMD():
 
             z1 = tf.add(self.gaussiankernel(list1, list2, sigma), self.gaussiankernel(list3, list4, sigma))
             z2 = tf.add(self.gaussiankernel(list1, list4, sigma), self.gaussiankernel(list2, list3, sigma))
-            z_i = tf.add(z1, tf.mul(signal, z2))
+            z_i = tf.add(z1, tf.multiply(signal, z2))
 
             n_samples = tf.add(n_samples, flag)
 
@@ -204,9 +203,9 @@ class MMD():
         # slice 1-D tensor
         for i in range(beta_size):
             small_beta = tf.slice(beta,[i],[1])
-            small_sigma = tf.mul(tf.slice(times,[i],[1]),sigma)
+            small_sigma = tf.multiply(tf.slice(times,[i],[1]),sigma)
             kernel = self.getOptimizedKernel(input_x,input_y,n_source,n_target,dim,small_sigma)
-            mmd = tf.add(mmd,tf.mul(kernel,small_beta))
+            mmd = tf.add(mmd,tf.multiply(kernel,small_beta))
 
         return mmd
 
@@ -249,4 +248,3 @@ def main():
 
 if __name__  == '__main__':
     main()
-
