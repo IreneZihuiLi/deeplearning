@@ -2,39 +2,29 @@
 
 In this markdown, there is a list of Transfer Learning material mostly for Natural Language Processing, divided into categories by the type of resource.
 
-## Thesis:
-[Deep Learning Models for Unsupervised and Transfer Learning PhD Thesis](http://www.cs.toronto.edu/~nitish/nitish_thesis.pdf), University of Toronto, May 2017
-
-[Transfer Learning Techniques for Deep Neural Nets](http://www.cs.utep.edu/ofuentes/theses/Gutstein_Dissertation.pdf) , Steven Michael Gutstein, 2010
-
-[Feature-based Transfer Learning and Real-world applications](https://pdfs.semanticscholar.org/171c/0aa92b49e27f661a9cb1dd990d2f529d21da.pdf), Sinno Jialin Pan
-
-## Survey:
-http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf (with Reinforcement Learning 2009)
-
-https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf (2009)
-
-https://arxiv.org/pdf/1705.04396.pdf (2017)
-
-https://arxiv.org/pdf/1707.08114.pdf (2017) (Multi-task Learning)
-
-https://journalofbigdata.springeropen.com/articles/10.1186/s40537-016-0043-6 (2015-2016)
-
-http://www.umiacs.umd.edu/~pvishalm/Journal_pub/SPM_DA_v9.pdf (2015)
 
 
 ## Theory Papers:
 [How Transferable are Neural Networks in NLP Applications?](https://arxiv.org/pdf/1411.1792.pdf) (2016)
+They tried to follow a similar setting with CNN for images while transfer to encoder-decoder frameworks. In the paper, they focus on two issues: (1)the specialization of higher layer neurons to their original task at the expense of performance on the
+target task, which was expected, and (2) optimization difficulties related to splitting networks between co-adapted neurons, which was not expected.
 
 [A Pilot Study of Domain Adaptation Effect for Neural Abstractive Summarization](https://arxiv.org/abs/1707.07062) (2017, working on summarization)
+This is a pilot work for domain adaptation+abstractive summarization. The model is simple but the analysis experiments are solid. 
 
 
 ## Recent Papers
 [DARLA: Improving Zero-Shot Transfer in Reinforcement Learning](https://arxiv.org/abs/1707.08475) (ICML 17’)
+This paper proposed a new multi-stage RL agent to zero-shot transfer learning tasks. The model significantly outperforms conventional baselines in computer vision.
+
 
 [Supervised and Unsupervised Transfer Learning for Question Answering](https://arxiv.org/abs/1711.05345) (Naacl 18’) [code](https://github.com/chun5212021202/QACNN)
+They proposed supervised and unsupervised methods for question answering based on three different datasets: TOEFL, MCTest and MovieQA. The model improves the performance on TOEFL dataset by 7%. They show that transfer learning is helpfull in an unsupervised learning setting. 
+
 
 [NLP Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm](http://www.aclweb.org/anthology/D17-1169) (EMNLP 17’)
+
+
 
 ## EMNLP 17
 [Learning to select data for transfer learning with Bayesian Optimization](https://www.aclweb.org/anthology/D17-1038)
@@ -86,6 +76,27 @@ https://epat2014.sciencesconf.org/conference/epat2014/pages/slides_DA_epat_17.pd
 
 https://simons.berkeley.edu/talks/trevor-darrell-2017-3-29 (Video)
 
+
+
+## Thesis:
+[Deep Learning Models for Unsupervised and Transfer Learning PhD Thesis](http://www.cs.toronto.edu/~nitish/nitish_thesis.pdf), University of Toronto, May 2017
+
+[Transfer Learning Techniques for Deep Neural Nets](http://www.cs.utep.edu/ofuentes/theses/Gutstein_Dissertation.pdf) , Steven Michael Gutstein, 2010
+
+[Feature-based Transfer Learning and Real-world applications](https://pdfs.semanticscholar.org/171c/0aa92b49e27f661a9cb1dd990d2f529d21da.pdf), Sinno Jialin Pan
+
+## Survey:
+http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf (with Reinforcement Learning 2009)
+
+https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf (2009)
+
+https://arxiv.org/pdf/1705.04396.pdf (2017)
+
+https://arxiv.org/pdf/1707.08114.pdf (2017) (Multi-task Learning)
+
+https://journalofbigdata.springeropen.com/articles/10.1186/s40537-016-0043-6 (2015-2016)
+
+http://www.umiacs.umd.edu/~pvishalm/Journal_pub/SPM_DA_v9.pdf (2015)
 
 ## Resources, materials and interesting ideas:
 http://tommasit.wixsite.com/datl14tutorial/bibliography (2014, list of papers, tutorials)
