@@ -6,19 +6,23 @@ In this markdown, there is a list of Transfer Learning material mostly for Natur
 
 ## Theory Papers:
 [How Transferable are Neural Networks in NLP Applications?](https://arxiv.org/pdf/1411.1792.pdf) (2016)
+
 They tried to follow a similar setting with CNN for images while transfer to encoder-decoder frameworks. In the paper, they focus on two issues: (1)the specialization of higher layer neurons to their original task at the expense of performance on the
 target task, which was expected, and (2) optimization difficulties related to splitting networks between co-adapted neurons, which was not expected.
 
 [A Pilot Study of Domain Adaptation Effect for Neural Abstractive Summarization](https://arxiv.org/abs/1707.07062) (2017, working on summarization)
+
 This is a pilot work for domain adaptation+abstractive summarization. The model is simple but the analysis experiments are solid. 
 
 
 ## Recent Papers
 [DARLA: Improving Zero-Shot Transfer in Reinforcement Learning](https://arxiv.org/abs/1707.08475) (ICML 17’)
+
 This paper proposed a new multi-stage RL agent to zero-shot transfer learning tasks. The model significantly outperforms conventional baselines in computer vision.
 
 
 [Supervised and Unsupervised Transfer Learning for Question Answering](https://arxiv.org/abs/1711.05345) (Naacl 18’) [code](https://github.com/chun5212021202/QACNN)
+
 They proposed supervised and unsupervised methods for question answering based on three different datasets: TOEFL, MCTest and MovieQA. The model improves the performance on TOEFL dataset by 7%. They show that transfer learning is helpfull in an unsupervised learning setting. 
 
 
@@ -100,13 +104,17 @@ http://www.umiacs.umd.edu/~pvishalm/Journal_pub/SPM_DA_v9.pdf (2015)
 
 ## Resources, materials and interesting ideas:
 http://tommasit.wixsite.com/datl14tutorial/bibliography (2014, list of papers, tutorials)
+
 This is a resource blog post for a list of realted papers and articles before and including the year 2014. 
 
 [Fighting Offensive Language on Social Media with Unsupervised Text Style Transfer](https://arxiv.org/pdf/1805.07685.pdf)
+
 They apply unsupervised text style transfer to translate offensive sentences into non-offensive ones. Datasets are Twitter and Redit. 
 
 [Deep Text Style Transfer](http://www.cs.tau.ac.il/~joberant/teaching/advanced_nlp_spring_2018/past_projects/style_transfer.pdf)
+
 This paper introduces an interesting task of style transfer using GAN model on the Yelp review dataset.  
 
 [Transfer Learning in NLP](https://blog.feedly.com/transfer-learning-in-nlp/) (2018) 
+
 This is a short tutorial post for this topic, including a brief introduction and other user cases. A well-written must-read for beginners. 
