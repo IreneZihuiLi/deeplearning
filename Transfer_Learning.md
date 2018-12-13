@@ -1,6 +1,6 @@
 # Awesome Transfer Learning
 
-In this markdown, there is a list of Transfer Learning material mostly for Natural Language Processing, divided into categories by the type of resource.
+In this markdown, there is a list of Transfer Learning material mostly for Natural Language Processing, divided into categories by the type of resource. Keep updating! Stay tuned!
 
 
 
@@ -28,6 +28,7 @@ They proposed supervised and unsupervised methods for question answering based o
 
 [NLP Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm](http://www.aclweb.org/anthology/D17-1169) (EMNLP 17’)
 
+The paper shows that by extending the distant supervision to a more diverse set of noisy labels, the models can learn richer representations. The dataset contains 1246 million tweets containing one of 64 common emojis. They achieve sota results on 8 benchmark datasets. 
 
 
 ## EMNLP 17
