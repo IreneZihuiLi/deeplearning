@@ -76,7 +76,11 @@ The paper shows that by extending the distant supervision to a more diverse set 
 ## Presentation Slides and Talks
 http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/transfer.pdf
 
+This is a lecture slides for an introduction. Highly recommend. It has vivid examples for the concepts and few paper introductions. If you know Chinese, you can search for the YouTube video for the lecture. 
+
 https://epat2014.sciencesconf.org/conference/epat2014/pages/slides_DA_epat_17.pdf
+
+This is a theretical introduction to transfer learning and domain adaptation. 
 
 
 https://simons.berkeley.edu/talks/trevor-darrell-2017-3-29 (Video)
