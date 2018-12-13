@@ -100,9 +100,13 @@ http://www.umiacs.umd.edu/~pvishalm/Journal_pub/SPM_DA_v9.pdf (2015)
 
 ## Resources, materials and interesting ideas:
 http://tommasit.wixsite.com/datl14tutorial/bibliography (2014, list of papers, tutorials)
+This is a resource blog post for a list of realted papers and articles before and including the year 2014. 
 
 [Fighting Offensive Language on Social Media with Unsupervised Text Style Transfer](https://arxiv.org/pdf/1805.07685.pdf)
+They apply unsupervised text style transfer to translate offensive sentences into non-offensive ones. Datasets are Twitter and Redit. 
 
 [Deep Text Style Transfer](http://www.cs.tau.ac.il/~joberant/teaching/advanced_nlp_spring_2018/past_projects/style_transfer.pdf)
+This paper introduces an interesting task of style transfer using GAN model on the Yelp review dataset.  
 
-[Transfer Learning in NLP](https://blog.feedly.com/transfer-learning-in-nlp/) (2018)
+[Transfer Learning in NLP](https://blog.feedly.com/transfer-learning-in-nlp/) (2018) 
+This is a short tutorial post for this topic, including a brief introduction and other user cases. A well-written must-read for beginners. 
